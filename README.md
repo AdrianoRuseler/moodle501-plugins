@@ -4,9 +4,9 @@ Plugins for Moodle 5.0
 ## Moodle Update
 ```bash
 export MDLREPO="https://github.com/moodle/moodle.git"
-export MDLBRANCH="MOODLE_500_STABLE"  # GIT Branch for moodle core
+export MDLBRANCH="MOODLE_501_STABLE"  # GIT Branch for moodle core
 export MDLCORE="mdlcore" # Temp folder for moodle core
-export PLGREPO="https://github.com/AdrianoRuseler/moodle500-plugins.git"
+export PLGREPO="https://github.com/AdrianoRuseler/moodle501-plugins.git"
 export PLGBRANCH="main" # GIT Branch for moodle plugins
 export MDLPLGS="mdlplugins" # Temp folder for moodle plugins
 # Moodle software (For example, everything in server/htdocs/moodle)
@@ -33,7 +33,7 @@ sudo rm -rf /tmp/$MDLPLGS
 sudo rm -rf /tmp/$MDLCORE
 ```
 ## Moodle config.php
-- https://docs.moodle.org/500/en/Configuration_file
+- https://docs.moodle.org/501/en/Configuration_file
 
 ``` php
 // Use the following flag to completely disable the installation of plugins
@@ -49,9 +49,12 @@ $CFG->disableupdatenotifications = true;
 // those config settings via the web. They will need to be set explicitly in the
 // config.php file
 $CFG->preventexecpath = true;
+
+// Configuring Moodle
+$CFG->routerconfigured = true;
 ```
 
-## Plugins List!  Imported from 405 - TODO!
+## Plugins List!  Imported from 500 - TODO!
 
 ### MOD
 
