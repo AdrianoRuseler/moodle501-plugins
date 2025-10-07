@@ -1,5 +1,5 @@
-# moodle500-plugins
-Plugins for Moodle 5.0
+# moodle501-plugins
+Plugins for Moodle 5.1
 
 ## Moodle Update
 ```bash
