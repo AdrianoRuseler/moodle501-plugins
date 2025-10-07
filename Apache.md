@@ -2,10 +2,18 @@
 - https://www.apache.org/
 
 ## Config
-- https://docs.moodle.org/500/en/Apache
+- https://docs.moodle.org/501/en/Apache
 
 ```bash
-# https://docs.moodle.org/500/en/Apache
+# https://docs.moodle.org/501/en/Apache#Routing
+DocumentRoot /var/www/moodle/public
+<Directory /var/www/moodle/public>
+    AllowOverride None
+    Require all granted
+    FallbackResource /r.php
+</Directory>
+
+# https://docs.moodle.org/501/en/Apache
 # The function slash arguments is required for various features 
 # in Moodle to work correctly, as described in Using slash arguments. 
 AcceptPathInfo On
