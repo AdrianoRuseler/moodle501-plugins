@@ -287,7 +287,7 @@ git submodule add -b main https://github.com/bynare/moodle-enrol_auto.git enrol/
 
 - https://github.com/DigiDago/moodle-format_softcourse
 ```bash
-git submodule add -b MOODLE_500_STABLE https://github.com/DigiDago/moodle-format_softcourse.git course/format/softcourse
+git submodule add -b MOODLE_501_STABLE https://github.com/DigiDago/moodle-format_softcourse.git course/format/softcourse
 ```
 
 - https://bitbucket.org/dw8/moodle-format_tiles
