@@ -292,7 +292,7 @@ git submodule add -b MOODLE_501_STABLE https://github.com/DigiDago/moodle-format
 
 - https://bitbucket.org/dw8/moodle-format_tiles
 ```bash
-git submodule add -b moodle50 https://bitbucket.org/dw8/moodle-format_tiles.git course/format/tiles
+git submodule add -b moodle51 https://bitbucket.org/dw8/moodle-format_tiles.git course/format/tiles
 ```
 
 - https://gitlab.com/drlikm/format_etask
