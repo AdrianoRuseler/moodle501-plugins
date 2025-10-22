@@ -2,3 +2,7 @@
 	path = moodle/public/course/format/softcourse
 	url = https://github.com/DigiDago/moodle-format_softcourse.git
 	branch = MOODLE_501_STABLE
+[submodule "moodle/public/course/format/tiles"]
+	path = moodle/public/course/format/tiles
+	url = https://bitbucket.org/dw8/moodle-format_tiles.git
+	branch = moodle51
