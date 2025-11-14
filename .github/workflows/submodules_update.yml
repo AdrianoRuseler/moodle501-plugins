@@ -1,32 +1,52 @@
 name: Update Submodules
 
 on:
+  # Run daily at 2 AM UTC
   schedule:
-    - cron: "0 3 * * *"   # Runs daily at 3 AM UTC
-  workflow_dispatch:       # Allow manual trigger
+    - cron: '0 2 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+  
+  # Optionally trigger when the submodule repo is updated
+  # (requires webhook setup from the submodule repository)
+  repository_dispatch:
+    types: [submodule-update]
 
 jobs:
   update-submodules:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repo with submodules
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           submodules: true
           token: ${{ secrets.GITHUB_TOKEN }}
-
+      
       - name: Update submodules
         run: |
-          git submodule sync --recursive
-          git submodule update --init --recursive --remote || echo "No remote branch found"
-          git add .
-          if ! git diff --cached --quiet; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git commit -m "chore: update submodules"
-            git push
+          git submodule update --remote --merge
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status -s) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
           else
-            echo "No submodule updates found."
+            echo "changes=false" >> $GITHUB_OUTPUT
           fi
-          
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "chore: update submodules to latest commit"
+          git push
+      
+      - name: No changes
+        if: steps.check_changes.outputs.changes == 'false'
+        run: echo "Submodules are already up to date"
+        
