@@ -18,7 +18,8 @@ jobs:
 
       - name: Update submodules
         run: |
-          git submodule update --init --recursive --remote
+          git submodule sync --recursive
+          git submodule update --init --recursive --remote || echo "No remote branch found"
           git add .
           if ! git diff --cached --quiet; then
             git config user.name "github-actions[bot]"
