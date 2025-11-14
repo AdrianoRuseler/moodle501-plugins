@@ -25,8 +25,35 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Update submodules
+        id: update_submodules
         run: |
-          git submodule update --remote --merge
+          # Update each submodule and handle errors gracefully
+          git submodule foreach '
+            echo "Updating submodule: $name"
+            
+            # Fetch all branches and tags
+            git fetch --all || { echo "Failed to fetch $name"; exit 0; }
+            
+            # Get the branch this submodule is tracking
+            BRANCH=$(git config -f $toplevel/.gitmodules submodule.$name.branch || echo "main")
+            
+            # Check if branch exists remotely
+            if git ls-remote --heads origin $BRANCH | grep -q $BRANCH; then
+              echo "Branch $BRANCH exists, checking out..."
+              git checkout $BRANCH || git checkout -b $BRANCH origin/$BRANCH
+              git merge origin/$BRANCH || { echo "Merge conflict in $name"; exit 0; }
+            else
+              echo "Branch $BRANCH not found, trying default branch..."
+              DEFAULT_BRANCH=$(git remote show origin | grep "HEAD branch" | cut -d ":" -f 2 | tr -d " ")
+              if [ -n "$DEFAULT_BRANCH" ]; then
+                echo "Using default branch: $DEFAULT_BRANCH"
+                git checkout $DEFAULT_BRANCH || git checkout -b $DEFAULT_BRANCH origin/$DEFAULT_BRANCH
+                git merge origin/$DEFAULT_BRANCH || { echo "Merge conflict in $name"; exit 0; }
+              else
+                echo "Could not determine default branch for $name"
+              fi
+            fi
+          ' || echo "Some submodules had issues but continuing..."
       
       - name: Check for changes
         id: check_changes
