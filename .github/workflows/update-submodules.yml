@@ -1,0 +1,53 @@
+name: Update Submodules
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 1. Checkout Repository
+        # This action fetches the code into the workspace root (no extra folder needed).
+        uses: actions/checkout@v4
+
+      - name: 2. Configure SSH and Git (For PUSHING changes back)
+        run: |
+          # A. Identity Setup
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+          # B. Key Creation (Same manual setup to enable git push)
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      - name: 3. Execute Update and Push Script
+        # The commands now run from the root of the checked-out repository.
+        run: |
+          echo "Initialize submodules..."
+          # This must be run first on a fresh checkout
+          git submodule update --init
+
+          echo "Get version file.."
+          # Create or update the version file in the root
+          wget https://raw.githubusercontent.com/moodle/moodle/MOODLE_501_STABLE/version.php -O version.php
+
+          echo "Run: git submodule update --remote"
+          git submodule update --remote
+
+          # Check for changes
+          if [[ -n $(git status -s) ]]; then
+            echo "Changes detected. Committing..."
+            git add .
+            git commit -m "GitHub Actions submodule update."
+            # The SSH key allows this push
+            git push origin HEAD
+          else
+            echo "No changes detected. Skipping commit."
+          fi
+          
