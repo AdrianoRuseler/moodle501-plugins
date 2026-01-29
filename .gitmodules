@@ -22,7 +22,3 @@
 	path = moodle/public/lib/editor/tiny/plugins/preview
 	url = https://github.com/dthies/moodle-tiny_preview.git
 	branch = main
-[submodule "moodle/public/lib/editor/tiny/plugins/wordimport"]
-	path = moodle/public/lib/editor/tiny/plugins/wordimport
-	url = https://codeberg.org/linos/moodle-tiny_wordimport.git
-	branch = main
