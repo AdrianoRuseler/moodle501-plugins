@@ -74,3 +74,7 @@
 	path = moodle/public/admin/tool/certificate
 	url = https://github.com/moodleworkplace/moodle-tool_certificate.git
 	branch = MOODLE_500_STABLE
+[submodule "moodle/public/mod/hvp"]
+	path = moodle/public/mod/hvp
+	url = https://github.com/h5p/h5p-moodle-plugin.git
+	branch = stable
