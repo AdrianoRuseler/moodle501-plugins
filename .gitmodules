@@ -122,3 +122,63 @@
 	path = moodle/public/availability/condition/ipaddress
 	url = https://github.com/MFreakNL/moodle-availability_ipaddress.git
 	branch = main
+[submodule "moodle/public/question/type/oumultiresponse"]
+	path = moodle/public/question/type/oumultiresponse
+	url = https://github.com/moodleou/moodle-qtype_oumultiresponse.git
+	branch = main
+[submodule "moodle/public/question/type/vplquestion"]
+	path = moodle/public/question/type/vplquestion
+	url = https://gricad-gitlab.univ-grenoble-alpes.fr/moodle-plugins/moodle-qtype_vplquestion.git
+	branch = master
+[submodule "moodle/public/question/type/combined"]
+	path = moodle/public/question/type/combined
+	url = https://github.com/moodleou/moodle-qtype_combined.git
+	branch = main
+[submodule "moodle/public/question/type/essayautograde"]
+	path = moodle/public/question/type/essayautograde
+	url = https://github.com/gbateson/moodle-qtype_essayautograde.git
+	branch = master
+[submodule "moodle/public/question/behaviour/adaptive_adapted_for_coderunner"]
+	path = moodle/public/question/behaviour/adaptive_adapted_for_coderunner
+	url = https://github.com/trampgeek/moodle-qbehaviour_adaptive_adapted_for_coderunner.git
+	branch = master
+[submodule "moodle/public/question/type/coderunner"]
+	path = moodle/public/question/type/coderunner
+	url = https://github.com/trampgeek/moodle-qtype_coderunner.git
+	branch = master
+[submodule "moodle/public/question/type/pmatch"]
+	path = moodle/public/question/type/pmatch
+	url = https://github.com/moodleou/moodle-qtype_pmatch.git
+	branch = main
+[submodule "moodle/public/question/type/varnumericset"]
+	path = moodle/public/question/type/varnumericset
+	url = https://github.com/moodleou/moodle-qtype_varnumericset.git
+	branch = main
+[submodule "moodle/public/question/type/varnumeric"]
+	path = moodle/public/question/type/varnumeric
+	url = https://github.com/moodleou/moodle-qtype_varnumeric.git
+	branch = main
+[submodule "moodle/public/question/type/varnumunit"]
+	path = moodle/public/question/type/varnumunit
+	url = https://github.com/moodleou/moodle-qtype_varnumunit.git
+	branch = main
+[submodule "moodle/public/lib/editor/ousupsub"]
+	path = moodle/public/lib/editor/ousupsub
+	url = https://github.com/moodleou/moodle-editor_ousupsub.git
+	branch = main
+[submodule "moodle/public/question/behaviour/dfexplicitvaildate"]
+	path = moodle/public/question/behaviour/dfexplicitvaildate
+	url = https://github.com/maths/moodle-qbehaviour_dfexplicitvaildate.git
+	branch = master
+[submodule "moodle/public/question/behaviour/dfcbmexplicitvaildate"]
+	path = moodle/public/question/behaviour/dfcbmexplicitvaildate
+	url = https://github.com/maths/moodle-qbehaviour_dfcbmexplicitvaildate.git
+	branch = master
+[submodule "moodle/public/question/behaviour/adaptivemultipart"]
+	path = moodle/public/question/behaviour/adaptivemultipart
+	url = https://github.com/maths/moodle-qbehaviour_adaptivemultipart.git
+	branch = master
+[submodule "moodle/public/question/type/stack"]
+	path = moodle/public/question/type/stack
+	url = https://github.com/maths/moodle-qtype_stack.git
+	branch = master
