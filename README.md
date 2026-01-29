@@ -240,8 +240,6 @@ git submodule add -b master https://github.com/gbateson/moodle-qtype_essayautogr
 git submodule add -b master https://github.com/trampgeek/moodle-qbehaviour_adaptive_adapted_for_coderunner.git question/behaviour/adaptive_adapted_for_coderunner
 git submodule add -b master https://github.com/trampgeek/moodle-qtype_coderunner.git question/type/coderunner
 ```
--->qtype_coderunner
-Default exception handler: Erro ao escrever na base de dados Debug: Column 'parent' cannot be null
 
 - https://github.com/moodleou/moodle-qtype_pmatch
 - https://github.com/moodleou/moodle-qtype_varnumunit
@@ -253,6 +251,24 @@ git submodule add -b main https://github.com/moodleou/moodle-qtype_varnumunit.gi
 git submodule add -b main https://github.com/moodleou/moodle-editor_ousupsub.git lib/editor/ousupsub
 ```
 
+STACK question type
+- https://github.com/maths/moodle-qbehaviour_dfexplicitvaildate
+```bash
+git submodule add -b master https://github.com/maths/moodle-qbehaviour_dfexplicitvaildate.git question/behaviour/dfexplicitvaildate
+```
+- https://github.com/maths/moodle-qbehaviour_dfcbmexplicitvaildate
+```bash
+git submodule add -b master https://github.com/maths/moodle-qbehaviour_dfcbmexplicitvaildate.git question/behaviour/dfcbmexplicitvaildate
+```
+- https://github.com/maths/moodle-qbehaviour_adaptivemultipart
+```bash
+git submodule add -b master https://github.com/maths/moodle-qbehaviour_adaptivemultipart.git question/behaviour/adaptivemultipart
+```		
+- https://github.com/maths/moodle-qtype_stack
+```bash
+git submodule add -b master https://github.com/maths/moodle-qtype_stack.git question/type/stack
+```
+
 ### ADMIN
 - https://github.com/moodleworkplace/moodle-tool_certificate
 ```bash
@@ -262,6 +278,13 @@ git submodule add -b MOODLE_500_STABLE https://github.com/moodleworkplace/moodle
 ```bash
 git submodule add -b master https://github.com/Syxton/moodle-tool_coursearchiver.git admin/tool/coursearchiver
 ```
+- https://github.com/moodle-an-hochschulen/moodle-tool_redis
+```bash
+git submodule add -b MOODLE_501_STABLE https://github.com/moodle-an-hochschulen/moodle-tool_redis.git admin/tool/redis
+```
+
+#### TODO
+
 - https://github.com/moodlehq/moodle-tool_migratehvp2h5p
 ```bash
 git submodule add -b main https://github.com/moodlehq/moodle-tool_migratehvp2h5p.git admin/tool/migratehvp2h5p
@@ -274,14 +297,11 @@ git submodule add -b MOODLE_404_STABLE https://github.com/catalyst/moodle-tool_t
 ```bash
 git submodule add -b MOODLE_404_STABLE https://github.com/catalyst/moodle-tool_dynamic_cohorts.git admin/tool/dynamic_cohorts
 ```
-- https://github.com/moodle-an-hochschulen/moodle-tool_redis
-```bash
-git submodule add -b MOODLE_500_STABLE https://github.com/moodle-an-hochschulen/moodle-tool_redis.git admin/tool/redis
-```
+
 
 ### ENROL
 
-### TO REMOVE:
+#### TO REMOVE:
 
 - https://github.com/bobopinna/moodle-enrol_autoenrol
 ```bash
@@ -362,20 +382,4 @@ git submodule add -b main https://github.com/moodlehq/moodle-mod_survey.git mod/
 ```bash
 git submodule add -b MOODLE_500_STABLE https://github.com/moodleworkplace/moodle-block_rbreport.git blocks/rbreport
 ```
-## STACK question type - TODO!
-- https://github.com/maths/moodle-qbehaviour_dfexplicitvaildate
-```bash
-git submodule add -b master https://github.com/maths/moodle-qbehaviour_dfexplicitvaildate.git question/behaviour/dfexplicitvaildate
-```
-- https://github.com/maths/moodle-qbehaviour_dfcbmexplicitvaildate
-```bash
-git submodule add -b master https://github.com/maths/moodle-qbehaviour_dfcbmexplicitvaildate.git question/behaviour/dfcbmexplicitvaildate
-```
-- https://github.com/maths/moodle-qbehaviour_adaptivemultipart
-```bash
-git submodule add -b master https://github.com/maths/moodle-qbehaviour_adaptivemultipart.git question/behaviour/adaptivemultipart
-```		
-- https://github.com/maths/moodle-qtype_stack
-```bash
-git submodule add -b master https://github.com/maths/moodle-qtype_stack.git question/type/stack
-``` 
+
