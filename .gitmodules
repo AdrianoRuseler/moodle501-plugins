@@ -110,3 +110,15 @@
 	path = moodle/public/report/customsql
 	url = https://github.com/moodleou/moodle-report_customsql.git
 	branch = main
+[submodule "moodle/public/availability/condition/relativedate"]
+	path = moodle/public/availability/condition/relativedate
+	url = https://github.com/ewallah/moodle-availability_relativedate.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/availability/condition/sectioncompleted"]
+	path = moodle/public/availability/condition/sectioncompleted
+	url = https://github.com/bdecentgmbh/moodle-availability_sectioncompleted.git
+	branch = main
+[submodule "moodle/public/availability/condition/ipaddress"]
+	path = moodle/public/availability/condition/ipaddress
+	url = https://github.com/MFreakNL/moodle-availability_ipaddress.git
+	branch = main
