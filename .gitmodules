@@ -22,3 +22,51 @@
 	path = moodle/public/lib/editor/tiny/plugins/preview
 	url = https://github.com/dthies/moodle-tiny_preview.git
 	branch = main
+[submodule "moodle/public/mod/choicegroup"]
+	path = moodle/public/mod/choicegroup
+	url = https://github.com/ndunand/moodle-mod_choicegroup.git
+	branch = master
+[submodule "moodle/public/mod/studentquiz"]
+	path = moodle/public/mod/studentquiz
+	url = https://github.com/frankkoch/moodle-mod_studentquiz.git
+	branch = main
+[submodule "moodle/public/mod/quizgame"]
+	path = moodle/public/mod/quizgame
+	url = https://github.com/xow/moodle-mod_quizgame.git
+	branch = master
+[submodule "moodle/public/mod/vpl"]
+	path = moodle/public/mod/vpl
+	url = https://github.com/jcrodriguez-dis/moodle-mod_vpl.git
+	branch = master
+[submodule "moodle/public/mod/checklist"]
+	path = moodle/public/mod/checklist
+	url = https://github.com/davosmith/moodle-checklist.git
+	branch = master
+[submodule "moodle/public/mod/geogebra"]
+	path = moodle/public/mod/geogebra
+	url = https://github.com/projectestac/moodle-mod_geogebra.git
+	branch = master
+[submodule "moodle/public/mod/publication"]
+	path = moodle/public/mod/publication
+	url = https://github.com/academic-moodle-cooperation/moodle-mod_publication.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/mod/customcert"]
+	path = moodle/public/mod/customcert
+	url = https://github.com/markn86/moodle-mod_customcert.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/mod/scheduler"]
+	path = moodle/public/mod/scheduler
+	url = https://github.com/bostelm/moodle-mod_scheduler.git
+	branch = master
+[submodule "moodle/public/mod/coursecertificate"]
+	path = moodle/public/mod/coursecertificate
+	url = https://github.com/moodleworkplace/moodle-mod_coursecertificate.git
+	branch = MOODLE_500_STABLE
+[submodule "moodle/public/mod/subcourse"]
+	path = moodle/public/mod/subcourse
+	url = https://github.com/mudrd8mz/moodle-mod_subcourse.git
+	branch = MOODLE_405_STABLE
+[submodule "moodle/public/mod/jitsi"]
+	path = moodle/public/mod/jitsi
+	url = https://github.com/udima-university/moodle-mod_jitsi.git
+	branch = master
