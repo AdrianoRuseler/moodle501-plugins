@@ -10,3 +10,19 @@
 	path = moodle/public/mod/attendance
 	url = https://github.com/danmarsden/moodle-mod_attendance.git
 	branch = MOODLE_501_STABLE
+[submodule "moodle/public/lib/editor/tiny/plugins/cloze"]
+	path = moodle/public/lib/editor/tiny/plugins/cloze
+	url = https://github.com/srobotta/moodle-tiny_cloze.git
+	branch = main
+[submodule "moodle/public/lib/editor/tiny/plugins/fontcolor"]
+	path = moodle/public/lib/editor/tiny/plugins/fontcolor
+	url = https://github.com/bfh/moodle-tiny_fontcolor.git
+	branch = main
+[submodule "moodle/public/lib/editor/tiny/plugins/preview"]
+	path = moodle/public/lib/editor/tiny/plugins/preview
+	url = https://github.com/dthies/moodle-tiny_preview.git
+	branch = main
+[submodule "moodle/public/lib/editor/tiny/plugins/wordimport"]
+	path = moodle/public/lib/editor/tiny/plugins/wordimport
+	url = https://codeberg.org/linos/moodle-tiny_wordimport.git
+	branch = main
