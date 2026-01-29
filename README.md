@@ -140,6 +140,9 @@ git submodule add -b main https://github.com/bfh/moodle-tiny_fontcolor.git lib/e
 ```bash
 git submodule add -b main https://github.com/dthies/moodle-tiny_preview.git lib/editor/tiny/plugins/preview
 ```
+
+**Dependencies check failed for tiny_wordimport**
+
 - https://codeberg.org/linos/moodle-tiny_wordimport
 ```bash
 git submodule add -b main https://codeberg.org/linos/moodle-tiny_wordimport.git lib/editor/tiny/plugins/wordimport
