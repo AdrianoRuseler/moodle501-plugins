@@ -182,3 +182,11 @@
 	path = moodle/public/question/type/stack
 	url = https://github.com/maths/moodle-qtype_stack.git
 	branch = master
+[submodule "moodle/public/admin/tool/coursearchiver"]
+	path = moodle/public/admin/tool/coursearchiver
+	url = https://github.com/Syxton/moodle-tool_coursearchiver.git
+	branch = master
+[submodule "moodle/public/admin/tool/redis"]
+	path = moodle/public/admin/tool/redis
+	url = https://github.com/moodle-an-hochschulen/moodle-tool_redis.git
+	branch = MOODLE_501_STABLE
