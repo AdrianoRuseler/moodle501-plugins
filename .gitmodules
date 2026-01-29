@@ -6,3 +6,7 @@
 	path = moodle/public/course/format/tiles
 	url = https://bitbucket.org/dw8/moodle-format_tiles.git
 	branch = moodle51
+[submodule "moodle/public/mod/attendance"]
+	path = moodle/public/mod/attendance
+	url = https://github.com/danmarsden/moodle-mod_attendance.git
+	branch = MOODLE_501_STABLE
