@@ -190,3 +190,11 @@
 	path = moodle/public/admin/tool/redis
 	url = https://github.com/moodle-an-hochschulen/moodle-tool_redis.git
 	branch = MOODLE_501_STABLE
+[submodule "moodle/public/mod/chat"]
+	path = moodle/public/mod/chat
+	url = https://github.com/moodlehq/moodle-mod_chat.git
+	branch = main
+[submodule "moodle/public/mod/survey"]
+	path = moodle/public/mod/survey
+	url = https://github.com/moodlehq/moodle-mod_survey.git
+	branch = main
