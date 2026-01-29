@@ -109,11 +109,16 @@ git submodule add -b MOODLE_500_STABLE https://github.com/moodleworkplace/moodle
 ```bash
 git submodule add -b MOODLE_405_STABLE https://github.com/mudrd8mz/moodle-mod_subcourse.git mod/subcourse
 ```
+
+TODO:
 - https://github.com/ecampbell/moodle-booktool_wordimport
 ```bash
 git submodule add -b master https://github.com/ecampbell/moodle-booktool_wordimport.git mod/book/tool/wordimport
 ```
-TODO:
+
+-->mod_hvp
+Error in upgrade script...
+
 - https://github.com/h5p/h5p-moodle-plugin
 ```bash
 git submodule add -b stable https://github.com/h5p/h5p-moodle-plugin.git mod/hvp
