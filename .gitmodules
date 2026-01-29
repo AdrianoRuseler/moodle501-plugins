@@ -206,3 +206,11 @@
 	path = moodle/public/plagiarism/turnitinsim
 	url = https://github.com/turnitin/moodle-plagiarism_turnitinsim.git
 	branch = develop
+[submodule "moodle/public/theme/adaptable"]
+	path = moodle/public/theme/adaptable
+	url = https://github.com/gjbarnard/moodle-theme_adaptable.git
+	branch = main
+[submodule "moodle/public/theme/boost_union"]
+	path = moodle/public/theme/boost_union
+	url = https://github.com/moodle-an-hochschulen/moodle-theme_boost_union.git
+	branch = MOODLE_501_STABLE
