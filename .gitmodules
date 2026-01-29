@@ -74,3 +74,23 @@
 	path = moodle/public/admin/tool/certificate
 	url = https://github.com/moodleworkplace/moodle-tool_certificate.git
 	branch = MOODLE_500_STABLE
+[submodule "moodle/public/blocks/xp"]
+	path = moodle/public/blocks/xp
+	url = https://github.com/FMCorz/moodle-block_xp.git
+	branch = master
+[submodule "moodle/public/blocks/completion_progress"]
+	path = moodle/public/blocks/completion_progress
+	url = https://github.com/deraadt/moodle-block_completion_progress.git
+	branch = master
+[submodule "moodle/public/blocks/dedication"]
+	path = moodle/public/blocks/dedication
+	url = https://github.com/catalyst/moodle-block_dedication.git
+	branch = MOODLE_404_STABLE
+[submodule "moodle/public/blocks/sharing_cart"]
+	path = moodle/public/blocks/sharing_cart
+	url = https://github.com/donhinkelman/moodle-block_sharing_cart.git
+	branch = master
+[submodule "moodle/public/blocks/grade_me"]
+	path = moodle/public/blocks/grade_me
+	url = https://github.com/remotelearner/moodle-block_grade_me.git
+	branch = MOODLE_405_STABLE
