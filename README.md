@@ -338,7 +338,7 @@ git submodule add -b main https://github.com/gjbarnard/moodle-theme_adaptable.gi
 ```
 - https://github.com/moodle-an-hochschulen/moodle-theme_boost_union
 ```bash
-git submodule add -b MOODLE_500_STABLE https://github.com/moodle-an-hochschulen/moodle-theme_boost_union.git theme/boost_union
+git submodule add -b MOODLE_501_STABLE https://github.com/moodle-an-hochschulen/moodle-theme_boost_union.git theme/boost_union
 ```
 
 ###   FILTER
@@ -363,7 +363,7 @@ git submodule add -b develop https://github.com/turnitin/moodle-plagiarism_turni
 
 - https://github.com/moodleuulm/moodle-local_sandbox
 ```bash
-git submodule add -b MOODLE_500_STABLE https://github.com/moodleuulm/moodle-local_sandbox.git local/sandbox
+git submodule add -b MOODLE_501_STABLE https://github.com/moodleuulm/moodle-local_sandbox.git local/sandbox
 ```
 
 ## Removed from core
