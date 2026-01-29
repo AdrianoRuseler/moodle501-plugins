@@ -198,3 +198,11 @@
 	path = moodle/public/mod/survey
 	url = https://github.com/moodlehq/moodle-mod_survey.git
 	branch = main
+[submodule "moodle/public/plagiarism/turnitin"]
+	path = moodle/public/plagiarism/turnitin
+	url = https://github.com/turnitin/moodle-plagiarism_turnitin.git
+	branch = develop
+[submodule "moodle/public/plagiarism/turnitinsim"]
+	path = moodle/public/plagiarism/turnitinsim
+	url = https://github.com/turnitin/moodle-plagiarism_turnitinsim.git
+	branch = develop
