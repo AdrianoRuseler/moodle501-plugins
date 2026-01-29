@@ -70,3 +70,7 @@
 	path = moodle/public/mod/jitsi
 	url = https://github.com/udima-university/moodle-mod_jitsi.git
 	branch = master
+[submodule "moodle/public/admin/tool/certificate"]
+	path = moodle/public/admin/tool/certificate
+	url = https://github.com/moodleworkplace/moodle-tool_certificate.git
+	branch = MOODLE_500_STABLE
