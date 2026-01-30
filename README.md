@@ -110,7 +110,6 @@ git submodule add -b MOODLE_500_STABLE https://github.com/moodleworkplace/moodle
 git submodule add -b MOODLE_405_STABLE https://github.com/mudrd8mz/moodle-mod_subcourse.git mod/subcourse
 ```
 
-TODO:
 - https://github.com/ecampbell/moodle-booktool_wordimport
 ```bash
 git submodule add -b master https://github.com/ecampbell/moodle-booktool_wordimport.git mod/book/tool/wordimport
@@ -145,8 +144,6 @@ git submodule add -b main https://github.com/bfh/moodle-tiny_fontcolor.git lib/e
 ```bash
 git submodule add -b main https://github.com/dthies/moodle-tiny_preview.git lib/editor/tiny/plugins/preview
 ```
-
-**Dependencies check failed for tiny_wordimport**
 
 - https://codeberg.org/linos/moodle-tiny_wordimport
 ```bash
