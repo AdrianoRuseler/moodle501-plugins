@@ -222,3 +222,11 @@
 	path = moodle/public/local/sandbox
 	url = https://github.com/moodleuulm/moodle-local_sandbox.git
 	branch = MOODLE_501_STABLE
+[submodule "moodle/public/mod/book/tool/wordimport"]
+	path = moodle/public/mod/book/tool/wordimport
+	url = https://github.com/ecampbell/moodle-booktool_wordimport.git
+	branch = master
+[submodule "moodle/public/lib/editor/tiny/plugins/wordimport"]
+	path = moodle/public/lib/editor/tiny/plugins/wordimport
+	url = https://codeberg.org/linos/moodle-tiny_wordimport.git
+	branch = main
