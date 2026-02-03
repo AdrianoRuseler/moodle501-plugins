@@ -130,6 +130,11 @@ cd ../..
 git submodule add -b master https://github.com/udima-university/moodle-mod_jitsi.git mod/jitsi
 ```
 
+- https://github.com/elearningsoftware/moodle-mod_journal
+```bash
+git submodule add -b master https://github.com/elearningsoftware/moodle-mod_journal.git mod/journal
+```
+
 ### TINY
 - https://github.com/srobotta/moodle-tiny_cloze
 ```bash
