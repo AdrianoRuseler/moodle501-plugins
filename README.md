@@ -280,6 +280,11 @@ git submodule add -b master https://github.com/Syxton/moodle-tool_coursearchiver
 git submodule add -b MOODLE_501_STABLE https://github.com/moodle-an-hochschulen/moodle-tool_redis.git admin/tool/redis
 ```
 
+- https://github.com/moodle-an-hochschulen/moodle-tool_opcache
+```bash
+git submodule add -b MOODLE_501_STABLE https://github.com/moodle-an-hochschulen/moodle-tool_opcache.git admin/tool/opcache
+```
+
 #### TODO
 
 - https://github.com/moodlehq/moodle-tool_migratehvp2h5p
