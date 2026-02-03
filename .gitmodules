@@ -234,3 +234,15 @@
 	path = moodle/public/mod/journal
 	url = https://github.com/elearningsoftware/moodle-mod_journal.git
 	branch = master
+[submodule "moodle/public/local/helpdesk"]
+	path = moodle/public/local/helpdesk
+	url = https://github.com/EduardoKrausME/moodle-local_helpdesk.git
+	branch = master
+[submodule "moodle/public/local/kopere_bi"]
+	path = moodle/public/local/kopere_bi
+	url = https://github.com/EduardoKrausME/moodle-local_kopere_bi.git
+	branch = master
+[submodule "moodle/public/local/kopere_dashboard"]
+	path = moodle/public/local/kopere_dashboard
+	url = https://github.com/EduardoKrausME/moodle-local-kopere_dashboard.git
+	branch = master
