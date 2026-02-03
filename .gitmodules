@@ -210,10 +210,6 @@
 	path = moodle/public/theme/adaptable
 	url = https://github.com/gjbarnard/moodle-theme_adaptable.git
 	branch = main
-[submodule "moodle/public/theme/boost_union"]
-	path = moodle/public/theme/boost_union
-	url = https://github.com/moodle-an-hochschulen/moodle-theme_boost_union.git
-	branch = MOODLE_501_STABLE
 [submodule "moodle/public/filter/ace_inline"]
 	path = moodle/public/filter/ace_inline
 	url = https://github.com/trampgeek/moodle-filter_ace_inline.git
