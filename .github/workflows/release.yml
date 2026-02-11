@@ -36,7 +36,9 @@ jobs:
 
       - name: Create Archive
         run: |
-          zip -r plugins-dist.zip moodle/
+          # Create a compressed tarball using XZ
+          # -c: create, -J: xz compression, -f: filename
+          tar -cJf plugins-dist.tar.xz moodle/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
@@ -44,7 +46,12 @@ jobs:
           files: plugins-dist.zip 
           tag_name: ${{ steps.vars.outputs.VERSION }}
           name: ${{ steps.vars.outputs.VERSION }}
-          body: "Build: ${{ steps.vars.outputs.VERSION }}"
+          # The body now includes a dynamic link to the release.md file at the current commit
+          body: |
+            ### 📦 Release Details
+            - **Version:** `${{ steps.vars.outputs.VERSION }}`
+            - **Build Date:** $(date +'%Y-%m-%d')
+            - **Full Changelog:** [View release.md](https://github.com/${{ github.repository }}/blob/${{ github.sha }}/release.md)
           draft: false
           prerelease: false
 
