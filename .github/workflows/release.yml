@@ -1,0 +1,53 @@
+name: Build Plugins-Only Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Plugins
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: zip
+          tools: composer:v2
+
+      - name: Create Archive
+        run: |
+          # Zip the 'moodle' folder
+          zip -r plugins-dist.zip moodle/
+          # If you have a vendor folder, include it
+          if [ -d "vendor" ]; then
+            zip -rg plugins-dist.zip vendor/
+          fi
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: plugins-dist.zip
+          name: Plugins Release ${{ github.ref_name }}
+          body: |
+            Custom Moodle plugins build.
+            Release Tag: ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+
+      - name: Delete Older Releases
+        uses: dev-drprasad/delete-older-releases@v0.3.3
+        with:
+          keep_latest: 5
+          delete_tags: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
