@@ -43,14 +43,13 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          files: plugins-dist.zip 
+          files: plugins-dist.tar.xz
           tag_name: ${{ steps.vars.outputs.VERSION }}
           name: ${{ steps.vars.outputs.VERSION }}
           # The body now includes a dynamic link to the release.md file at the current commit
           body: |
             ### 📦 Release Details
             - **Version:** `${{ steps.vars.outputs.VERSION }}`
-            - **Build Date:** $(date +'%Y-%m-%d')
             - **Full Changelog:** [View release.md](https://github.com/${{ github.repository }}/blob/${{ github.sha }}/release.md)
           draft: false
           prerelease: false
