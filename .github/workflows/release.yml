@@ -13,29 +13,38 @@ jobs:
       - name: Checkout Plugins
         uses: actions/checkout@v4
         with:
-          submodules: 'recursive' # Fetch actual code for the empty folders
-          fetch-depth: 1
+          submodules: 'recursive'
+          fetch-depth: 0 # Fetch all tags to calculate the daily counter correctly
 
-      - name: Generate Version String
+      - name: Generate Daily Version String
         id: vars
         run: |
           DATE=$(date +'%Y%m%d')
-          VERSION="${DATE}.${{ github.run_number }}"
+          
+          # Count how many tags exist starting with today's date
+          # This looks for tags like 20260211.01, 20260211.02...
+          COUNT=$(git tag -l "${DATE}.*" | wc -l)
+          
+          # Increment the count for the new release
+          NEXT_NUM=$((COUNT + 1))
+          
+          # Format to 2 digits (e.g., 01, 02)
+          VERSION="${DATE}.$(printf "%02d" $NEXT_NUM)"
+          
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+          echo "Generated Daily Version: $VERSION"
 
       - name: Create Archive
         run: |
-          # Zip the moodle folder containing all submodules
           zip -r plugins-dist.zip moodle/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
         with:
-          # This specifically attaches your generated zip
           files: plugins-dist.zip 
           tag_name: ${{ steps.vars.outputs.VERSION }}
           name: ${{ steps.vars.outputs.VERSION }}
-          body: "Chronological build of Moodle plugins with submodules."
+          body: "Build: ${{ steps.vars.outputs.VERSION }}"
           draft: false
           prerelease: false
 
@@ -46,4 +55,5 @@ jobs:
           delete_tags: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
+        
