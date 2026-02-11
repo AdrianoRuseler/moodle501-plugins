@@ -1,9 +1,6 @@
 name: Build Plugins-Only Release
 
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -36,6 +33,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: plugins-dist.zip
+          tag_name: build-${{ github.run_number }} # Generates a unique tag (e.g. build-12)
           name: Plugins Release ${{ github.ref_name }}
           body: |
             Custom Moodle plugins build.
