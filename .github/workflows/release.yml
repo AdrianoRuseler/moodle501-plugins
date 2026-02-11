@@ -12,7 +12,10 @@ jobs:
     steps:
       - name: Checkout Plugins
         uses: actions/checkout@v4
-
+        with:
+          submodules: 'recursive' # CRITICAL: Fixes the empty folder issue
+          fetch-depth: 1
+          
       - name: Generate Version String
         id: vars
         run: |
