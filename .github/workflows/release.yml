@@ -15,26 +15,23 @@ jobs:
         with:
           submodules: 'recursive' # CRITICAL: Fixes the empty folder issue
           fetch-depth: 1
-          
+
       - name: Generate Version String
         id: vars
         run: |
-          # Get date in YYYYMMDD format
           DATE=$(date +'%Y%m%d')
-          # Use the run_number as the .XX suffix (ensures uniqueness)
           VERSION="${DATE}.${{ github.run_number }}"
           echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
-          echo "Generated Version: $VERSION"
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.4'
-          extensions: zip
-          tools: composer:v2
+      - name: Verify Submodules
+        run: |
+          echo "🔍 Checking if plugin folders are populated..."
+          # List the contents of the moodle folder to verify files exist
+          ls -R moodle/ | grep -v '^$' | head -n 20
 
       - name: Create Archive
         run: |
+          # Use -r for recursive zipping
           zip -r plugins-dist.zip moodle/
           if [ -d "vendor" ]; then
             zip -rg plugins-dist.zip vendor/
@@ -46,10 +43,7 @@ jobs:
           files: plugins-dist.zip
           tag_name: ${{ steps.vars.outputs.VERSION }}
           name: Plugins Release ${{ steps.vars.outputs.VERSION }}
-          body: |
-            Automated Moodle plugins build.
-            Release Date: $(date +'%Y-%m-%d')
-            Source Commit: ${{ github.sha }}
+          body: "Includes submodules for custom Moodle plugins."
           draft: false
           prerelease: false
 
