@@ -1,13 +1,7 @@
 Here is the one-liner to add to your server's update script:
 ```bash
-curl -s https://api.github.com/repos/AdrianoRuseler/moodle501-plugins/releases/latest \
-| grep "browser_download_url" \
-| grep "tar.xz" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi - -O plugins-update.tar.xz
+curl -s https://api.github.com/repos/AdrianoRuseler/moodle501-plugins/releases/latest | grep "browser_download_url" | cut -d : -f 2,3 | tr -d \" | wget -qi - -O  /tmp/plugins-update.tar.xz
 ```
-
 
 ## Integrated "Update & Deploy" Script
 
@@ -17,16 +11,17 @@ set -e
 
 # 1. Download the highly compressed archive
 echo "📥 Fetching latest .tar.xz release..."
-# (Insert the curl command above here)
+curl -s https://api.github.com/repos/AdrianoRuseler/moodle501-plugins/releases/latest | grep "browser_download_url" | cut -d : -f 2,3 | tr -d \" | wget -qi - -O  /tmp/plugins-update.tar.xz
 
 # 2. Extract specifically using XZ
 echo "📦 Decompressing plugins..."
 mkdir -p /tmp/moodle_update
-tar -xJf plugins-update.tar.xz -C /tmp/moodle_update/
+tar -xJf /tmp/plugins-update.tar.xz -C /tmp/moodle_update/
 
 # 3. Apply updates to the live Moodle directory
 echo "📂 Syncing files to /var/www/html..."
-sudo rsync -av --delete /tmp/moodle_update/moodle/ /var/www/html/
+# rsync -av --delete /tmp/moodle_update/moodle/ /var/www/html/
+rsync -av /tmp/moodle_update/moodle/ /var/www/html/
 
 # 4. Moodle CLI Tasks
 echo "🆙 Upgrading Database..."
