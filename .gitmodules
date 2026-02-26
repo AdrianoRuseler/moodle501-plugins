@@ -242,3 +242,7 @@
 	path = moodle/public/blocks/rbreport
 	url = https://github.com/moodleworkplace/moodle-block_rbreport.git
 	branch = MOODLE_500_STABLE
+[submodule "moodle/public/course/format/buttons"]
+	path = moodle/public/course/format/buttons
+	url = https://github.com/jrangelardila/moodle-format_buttons.git
+	branch = 5.x
