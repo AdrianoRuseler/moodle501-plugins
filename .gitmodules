@@ -234,3 +234,7 @@
 	path = moodle/public/mod/journal
 	url = https://github.com/elearningsoftware/moodle-mod_journal.git
 	branch = master
+[submodule "moodle/public/lib/mathjax"]
+	path = moodle/public/lib/mathjax
+	url = https://github.com/mathjax/MathJax.git
+	branch = master
