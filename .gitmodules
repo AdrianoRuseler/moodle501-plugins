@@ -238,3 +238,7 @@
 	path = moodle/public/lib/mathjax
 	url = https://github.com/mathjax/MathJax.git
 	branch = master
+[submodule "moodle/public/blocks/rbreport"]
+	path = moodle/public/blocks/rbreport
+	url = https://github.com/moodleworkplace/moodle-block_rbreport.git
+	branch = MOODLE_500_STABLE
