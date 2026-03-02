@@ -246,3 +246,7 @@
 	path = moodle/public/course/format/buttons
 	url = https://github.com/jrangelardila/moodle-format_buttons.git
 	branch = 5.x
+[submodule "moodle/public/local/accessibility"]
+	path = moodle/public/local/accessibility
+	url = https://github.com/AdrianoRuseler/moodle-local_accessibility.git
+	branch = main
