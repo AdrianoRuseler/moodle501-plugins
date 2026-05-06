@@ -270,7 +270,10 @@ git submodule add -b master https://github.com/maths/moodle-qbehaviour_adaptivem
 ```bash
 git submodule add -b master https://github.com/maths/moodle-qtype_stack.git question/type/stack
 ```
-
+- https://github.com/maths/moodle-qbank_importasversion
+```bash
+git submodule add -b MOODLE_501_STABLE https://github.com/maths/moodle-qbank_importasversion.git question/bank/importasversion
+```
 ### ADMIN
 - https://github.com/moodleworkplace/moodle-tool_certificate
 ```bash
@@ -341,7 +344,7 @@ git submodule add -b FORMAT_ETASK_24_STABLE https://gitlab.com/drlikm/format_eta
 
 - https://github.com/gjbarnard/moodle-theme_adaptable
 ```bash
-git submodule add -b main https://github.com/gjbarnard/moodle-theme_adaptable.git theme/adaptable
+git submodule add -b MOODLE_501 https://github.com/gjbarnard/moodle-theme_adaptable.git theme/adaptable
 ```
 - https://github.com/moodle-an-hochschulen/moodle-theme_boost_union
 ```bash
