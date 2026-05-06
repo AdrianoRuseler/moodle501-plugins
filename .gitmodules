@@ -250,3 +250,7 @@
 	path = moodle/public/local/accessibility
 	url = https://github.com/AdrianoRuseler/moodle-local_accessibility.git
 	branch = main
+[submodule "moodle/public/question/bank/importasversion"]
+	path = moodle/public/question/bank/importasversion
+	url = https://github.com/maths/moodle-qbank_importasversion.git
+	branch = MOODLE_500_STABLE
