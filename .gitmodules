@@ -250,3 +250,7 @@
 	path = moodle/public/question/bank/importasversion
 	url = https://github.com/maths/moodle-qbank_importasversion.git
 	branch = MOODLE_500_STABLE
+[submodule "moodle/public/theme/adaptable"]
+	path = moodle/public/theme/adaptable
+	url = https://github.com/gjbarnard/moodle-theme_adaptable.git
+	branch = MOODLE_501
