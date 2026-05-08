@@ -254,3 +254,7 @@
 	path = moodle/public/theme/adaptable
 	url = https://github.com/gjbarnard/moodle-theme_adaptable.git
 	branch = MOODLE_501
+[submodule "moodle/public/mod/bigbluebuttonbn/extension/bnx"]
+	path = moodle/public/mod/bigbluebuttonbn/extension/bnx
+	url = https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx.git
+	branch = main
