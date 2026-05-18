@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout Plugins
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: 'recursive'
           fetch-depth: 0 # Fetch all tags to calculate the daily counter correctly
@@ -41,7 +41,7 @@ jobs:
           tar -cJf plugins-dist.tar.xz moodle/
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v3
         with:
           files: plugins-dist.tar.xz
           tag_name: ${{ steps.vars.outputs.VERSION }}
