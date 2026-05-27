@@ -2,7 +2,8 @@ name: Build Plugins-Only Release
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: '0 4 * * 5'  
 jobs:
   build:
     runs-on: ubuntu-latest
