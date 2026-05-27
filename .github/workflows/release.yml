@@ -54,12 +54,12 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Delete Old Releases
-        uses: smartsquaregmbh/delete-old-releases@v0.2.0
+      - name: Delete old package versions
+        uses: actions/delete-package-versions@v4
         with:
-          keep_latest: 2
-          delete_tags: true
+          package-name: my-package
+          package-type: npm
+          min-versions-to-keep: 2
+          delete-only-pre-release-versions: true
           token: ${{ secrets.GITHUB_TOKEN }}
-          
-
-        
+                
