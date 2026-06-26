@@ -65,7 +65,7 @@
 [submodule "moodle/public/mod/subcourse"]
 	path = moodle/public/mod/subcourse
 	url = https://github.com/mudrd8mz/moodle-mod_subcourse.git
-	branch = MOODLE_405_STABLE
+	branch = MOODLE_501_STABLE
 [submodule "moodle/public/mod/jitsi"]
 	path = moodle/public/mod/jitsi
 	url = https://github.com/udima-university/moodle-mod_jitsi.git
