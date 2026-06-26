@@ -85,7 +85,7 @@
 [submodule "moodle/public/blocks/dedication"]
 	path = moodle/public/blocks/dedication
 	url = https://github.com/catalyst/moodle-block_dedication.git
-	branch = MOODLE_404_STABLE
+	branch = MOODLE_500_STABLE
 [submodule "moodle/public/blocks/sharing_cart"]
 	path = moodle/public/blocks/sharing_cart
 	url = https://github.com/donhinkelman/moodle-block_sharing_cart.git
