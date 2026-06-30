@@ -254,3 +254,7 @@
 	path = moodle/public/mod/bigbluebuttonbn/extension/bnx
 	url = https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx.git
 	branch = main
+[submodule "moodle/public/question/type/vplquestion"]
+	path = moodle/public/question/type/vplquestion
+	url = https://github.com/AdrianoRuseler/moodle-qtype_vplquestion.git
+	branch = master
