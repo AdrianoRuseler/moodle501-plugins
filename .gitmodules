@@ -262,3 +262,7 @@
 	path = moodle/public/admin/tool/monitoring
 	url = https://github.com/daniil-berg/moodle-tool_monitoring.git
 	branch = main
+[submodule "moodle/public/filter/mermaid"]
+	path = moodle/public/filter/mermaid
+	url = https://github.com/SkudarTV/moodle-filter_mermaid.git
+	branch = master
