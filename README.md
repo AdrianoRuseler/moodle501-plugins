@@ -1,11 +1,11 @@
 # moodle501-plugins
 Plugins for Moodle 5.1
-- https://moodledev.io/general/releases/5.2
+- https://moodledev.io/general/releases/5.1
 
 [![Update Submodules](https://github.com/AdrianoRuseler/moodle501-plugins/actions/workflows/update-submodules.yml/badge.svg)](https://github.com/AdrianoRuseler/moodle501-plugins/actions/workflows/update-submodules.yml)
 [![Create Release](https://github.com/AdrianoRuseler/moodle501-plugins/actions/workflows/release.yml/badge.svg)](https://github.com/AdrianoRuseler/moodle501-plugins/actions/workflows/release.yml)
 
-## Moodle Update (TODO: public folder)
+## Moodle Update
 ```bash
 export MDLREPO="https://github.com/moodle/moodle.git"
 export MDLBRANCH="MOODLE_501_STABLE"  # GIT Branch for moodle core
@@ -135,6 +135,11 @@ git submodule add -b master https://github.com/udima-university/moodle-mod_jitsi
 - https://github.com/elearningsoftware/moodle-mod_journal
 ```bash
 git submodule add -b master https://github.com/elearningsoftware/moodle-mod_journal.git mod/journal
+```
+
+- https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx
+```bash
+git submodule add -b 1.1.x-release https://github.com/blindsidenetworks-ps/moodle-bbbext_bnx.git mod/bigbluebuttonbn/extension/bnx
 ```
 
 ### TINY
