@@ -57,7 +57,7 @@
 [submodule "moodle/public/mod/scheduler"]
 	path = moodle/public/mod/scheduler
 	url = https://github.com/bostelm/moodle-mod_scheduler.git
-	branch = master
+	branch = main
 [submodule "moodle/public/mod/coursecertificate"]
 	path = moodle/public/mod/coursecertificate
 	url = https://github.com/moodleworkplace/moodle-mod_coursecertificate.git
